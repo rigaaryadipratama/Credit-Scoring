@@ -1,0 +1,384 @@
+{
+  "applicant.json": {
+    "input": {
+      "LIMIT_BAL": 200000,
+      "PAY_0": 0,
+      "PAY_2": 0,
+      "PAY_3": 0,
+      "PAY_4": 0,
+      "PAY_5": 0,
+      "PAY_6": 0,
+      "BILL_AMT1": 30000,
+      "BILL_AMT2": 28000,
+      "BILL_AMT3": 26000,
+      "BILL_AMT4": 25000,
+      "BILL_AMT5": 24000,
+      "BILL_AMT6": 23000,
+      "PAY_AMT1": 5000,
+      "PAY_AMT2": 5000,
+      "PAY_AMT3": 4500,
+      "PAY_AMT4": 4500,
+      "PAY_AMT5": 4000,
+      "PAY_AMT6": 4000
+    },
+    "result": {
+      "model_version": "uci-lr-v1-30c6be3abd",
+      "probability_of_default": 0.06806815259884035,
+      "horizon": "bulan berikutnya; definisi target historis UCI",
+      "credit_score": 507,
+      "risk_band": "LOW",
+      "review_threshold": 0.14,
+      "review_flag": false,
+      "currency": "NTD",
+      "outside_training_range": [],
+      "explanation": {
+        "reference_pd": 0.18157929902390194,
+        "reference_log_odds": -1.5056840412548775,
+        "reconstructed_pd": 0.06806815259884035,
+        "factors": [
+          {
+            "feature": "PAY_0",
+            "label": "Status pembayaran bulan ke-1",
+            "log_odds_contribution": -0.4654332411556749,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "longest_delay",
+            "label": "Keterlambatan terpanjang",
+            "log_odds_contribution": -0.13972678453526477,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "delinquent_months",
+            "label": "Jumlah bulan dengan keterlambatan",
+            "log_odds_contribution": 0.09588527455333548,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT1",
+            "label": "Pembayaran bulan ke-1",
+            "log_odds_contribution": -0.08268421137864325,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT2",
+            "label": "Pembayaran bulan ke-2",
+            "log_odds_contribution": -0.07784363059160897,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "mean_utilization",
+            "label": "Rata-rata rasio tagihan terhadap limit",
+            "log_odds_contribution": -0.07655876316659697,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT3",
+            "label": "Pembayaran bulan ke-3",
+            "log_odds_contribution": -0.07537090656369454,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "LIMIT_BAL",
+            "label": "Limit kredit",
+            "log_odds_contribution": -0.07231531448687843,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_4",
+            "label": "Status pembayaran bulan ke-4",
+            "log_odds_contribution": -0.06754022237272463,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT4",
+            "label": "Pembayaran bulan ke-4",
+            "log_odds_contribution": -0.06552490827129258,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "latest_utilization",
+            "label": "Rasio tagihan terbaru terhadap limit",
+            "log_odds_contribution": -0.05359447540778782,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_6",
+            "label": "Status pembayaran bulan ke-6",
+            "log_odds_contribution": -0.05354642911109006,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT5",
+            "label": "Pembayaran bulan ke-5",
+            "log_odds_contribution": -0.050460573479819616,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_5",
+            "label": "Status pembayaran bulan ke-5",
+            "log_odds_contribution": -0.04600949844902015,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_3",
+            "label": "Status pembayaran bulan ke-3",
+            "log_odds_contribution": 0.04282063880568093,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT3",
+            "label": "Tagihan bulan ke-3",
+            "log_odds_contribution": 0.04272089895119158,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT1",
+            "label": "Tagihan bulan ke-1",
+            "log_odds_contribution": -0.034411391765396704,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT4",
+            "label": "Tagihan bulan ke-4",
+            "log_odds_contribution": 0.03350607798989639,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_2",
+            "label": "Status pembayaran bulan ke-2",
+            "log_odds_contribution": 0.021656886450186368,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "payment_balance_proxy",
+            "label": "Rasio pembayaran terhadap tagihan (proxy)",
+            "log_odds_contribution": 0.01852599065214333,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT5",
+            "label": "Tagihan bulan ke-5",
+            "log_odds_contribution": -0.016500735613019395,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT6",
+            "label": "Tagihan bulan ke-6",
+            "log_odds_contribution": 0.013778505008339766,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT6",
+            "label": "Pembayaran bulan ke-6",
+            "log_odds_contribution": -0.00879696356776335,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "balance_change",
+            "label": "Perubahan tagihan terhadap limit",
+            "log_odds_contribution": 0.004675116421456233,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT2",
+            "label": "Tagihan bulan ke-2",
+            "log_odds_contribution": 0.0016824627985669322,
+            "direction": "menaikkan risiko model"
+          }
+        ]
+      }
+    }
+  },
+  "high_delay.json": {
+    "input": {
+      "LIMIT_BAL": 200000,
+      "PAY_0": 2,
+      "PAY_2": 2,
+      "PAY_3": 2,
+      "PAY_4": 2,
+      "PAY_5": 2,
+      "PAY_6": 2,
+      "BILL_AMT1": 30000,
+      "BILL_AMT2": 28000,
+      "BILL_AMT3": 26000,
+      "BILL_AMT4": 25000,
+      "BILL_AMT5": 24000,
+      "BILL_AMT6": 23000,
+      "PAY_AMT1": 5000,
+      "PAY_AMT2": 5000,
+      "PAY_AMT3": 4500,
+      "PAY_AMT4": 4500,
+      "PAY_AMT5": 4000,
+      "PAY_AMT6": 4000
+    },
+    "result": {
+      "model_version": "uci-lr-v1-30c6be3abd",
+      "probability_of_default": 0.6242109729948262,
+      "horizon": "bulan berikutnya; definisi target historis UCI",
+      "credit_score": 300,
+      "risk_band": "HIGH",
+      "review_threshold": 0.14,
+      "review_flag": true,
+      "currency": "NTD",
+      "outside_training_range": [],
+      "explanation": {
+        "reference_pd": 0.18157929902390194,
+        "reference_log_odds": -1.5056840412548775,
+        "reconstructed_pd": 0.6242109729948261,
+        "factors": [
+          {
+            "feature": "PAY_0",
+            "label": "Status pembayaran bulan ke-1",
+            "log_odds_contribution": 1.6323416922684602,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "delinquent_months",
+            "label": "Jumlah bulan dengan keterlambatan",
+            "log_odds_contribution": -0.592255897624515,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_6",
+            "label": "Status pembayaran bulan ke-6",
+            "log_odds_contribution": 0.34190382584188767,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_5",
+            "label": "Status pembayaran bulan ke-5",
+            "log_odds_contribution": 0.2873575228209123,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "longest_delay",
+            "label": "Keterlambatan terpanjang",
+            "log_odds_contribution": 0.2702313955921649,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_4",
+            "label": "Status pembayaran bulan ke-4",
+            "log_odds_contribution": 0.23795479685334786,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_2",
+            "label": "Status pembayaran bulan ke-2",
+            "log_odds_contribution": 0.17310549402497089,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_3",
+            "label": "Status pembayaran bulan ke-3",
+            "log_odds_contribution": 0.16167855539914883,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT1",
+            "label": "Pembayaran bulan ke-1",
+            "log_odds_contribution": -0.08268421137864325,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT2",
+            "label": "Pembayaran bulan ke-2",
+            "log_odds_contribution": -0.07784363059160897,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "mean_utilization",
+            "label": "Rata-rata rasio tagihan terhadap limit",
+            "log_odds_contribution": -0.07655876316659697,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT3",
+            "label": "Pembayaran bulan ke-3",
+            "log_odds_contribution": -0.07537090656369454,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "LIMIT_BAL",
+            "label": "Limit kredit",
+            "log_odds_contribution": -0.07231531448687843,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT4",
+            "label": "Pembayaran bulan ke-4",
+            "log_odds_contribution": -0.06552490827129258,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "latest_utilization",
+            "label": "Rasio tagihan terbaru terhadap limit",
+            "log_odds_contribution": -0.05359447540778782,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT5",
+            "label": "Pembayaran bulan ke-5",
+            "log_odds_contribution": -0.050460573479819616,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT3",
+            "label": "Tagihan bulan ke-3",
+            "log_odds_contribution": 0.04272089895119158,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT1",
+            "label": "Tagihan bulan ke-1",
+            "log_odds_contribution": -0.034411391765396704,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT4",
+            "label": "Tagihan bulan ke-4",
+            "log_odds_contribution": 0.03350607798989639,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "payment_balance_proxy",
+            "label": "Rasio pembayaran terhadap tagihan (proxy)",
+            "log_odds_contribution": 0.01852599065214333,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT5",
+            "label": "Tagihan bulan ke-5",
+            "log_odds_contribution": -0.016500735613019395,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT6",
+            "label": "Tagihan bulan ke-6",
+            "log_odds_contribution": 0.013778505008339766,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "PAY_AMT6",
+            "label": "Pembayaran bulan ke-6",
+            "log_odds_contribution": -0.00879696356776335,
+            "direction": "menurunkan risiko model"
+          },
+          {
+            "feature": "balance_change",
+            "label": "Perubahan tagihan terhadap limit",
+            "log_odds_contribution": 0.004675116421456233,
+            "direction": "menaikkan risiko model"
+          },
+          {
+            "feature": "BILL_AMT2",
+            "label": "Tagihan bulan ke-2",
+            "log_odds_contribution": 0.0016824627985669322,
+            "direction": "menaikkan risiko model"
+          }
+        ]
+      }
+    }
+  }
+}

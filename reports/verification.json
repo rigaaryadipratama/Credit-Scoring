@@ -1,0 +1,17 @@
+{
+  "core_training": "passed on included UCI dataset",
+  "core_tests": {
+    "passed": 11,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "python_syntax": {
+    "compiled_files": 11,
+    "status": "passed"
+  },
+  "notebook_code_cells": "all executed successfully",
+  "source_dataset_checksum": "verified against included provenance",
+  "report_figures": "visually inspected",
+  "dashboard_interactive": "not run: Streamlit unavailable; PyPI installation blocked in build environment",
+  "api": "not included"
+}
